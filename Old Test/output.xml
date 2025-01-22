@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-22T12:04:28.616927" rpa="false" schemaversion="5">
+<suite id="s1" name="Testdemo2" source="C:\Users\prp12\PycharmProjects\RobotProject\Old Test\testdemo2.robot">
+<test id="s1-t1" name="Validate Child window Functionality" line="21">
+<kw name="Open the Browser login app" owner="resource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:29.011045" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-01-22T12:04:29.010863" elapsed="2.570474"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:31.581855" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-22T12:04:31.581614" elapsed="0.947133"/>
+</kw>
+<status status="PASS" start="2025-01-22T12:04:29.009967" elapsed="3.518975"/>
+</kw>
+<kw name="Select the Link of the Child Window">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T12:04:37.530283" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T12:04:32.529647" elapsed="5.001011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:37.532481" level="INFO">Clicking element 'css:.blinkingText'.</msg>
+<arg>css:.blinkingText</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T12:04:37.531300" elapsed="0.158638"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T12:04:42.690934" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T12:04:37.690180" elapsed="5.000909"/>
+</kw>
+<status status="PASS" start="2025-01-22T12:04:32.529250" elapsed="10.161991"/>
+</kw>
+<kw name="Verify the user is switched to Child window">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.691870" elapsed="0.032786"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:42.725232" level="INFO">Verifying element 'xpath://*[@class='inner-box']/h1' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>xpath://*[@class='inner-box']/h1</arg>
+<arg>DOCUMENTS REQUEST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.724921" elapsed="0.054622"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:42.829580" level="INFO">${result} = Note : This template needs to be strictly followed to send response. We will validate if you are real enrolled user before sending the resources needed.</msg>
+<var>${result}</var>
+<arg>//*[@class='im-para']/i</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.779785" elapsed="0.049891"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T12:04:42.830162" level="INFO">Note : This template needs to be strictly followed to send response. We will validate if you are real enrolled user before sending the resources needed.</msg>
+<arg>${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.829905" elapsed="0.000345"/>
+</kw>
+<status status="PASS" start="2025-01-22T12:04:42.691487" elapsed="0.138886"/>
+</kw>
+<kw name="Grab the email id from the Child Window">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T12:04:42.864144" level="INFO">${text1} = Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<var>${text1}</var>
+<arg>//*[@class='im-para red']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.830998" elapsed="0.033234"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-01-22T12:04:42.864862" level="INFO">@{newText} = [ Please email us  |  mentor@rahulshettyacademy.com with below templ | e to receive response ]</msg>
+<var>@{newText}</var>
+<arg>${text1}</arg>
+<arg>at</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.864517" elapsed="0.000399"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-01-22T12:04:42.865604" level="INFO">${text_split1} =  mentor@rahulshettyacademy.com with below templ</msg>
+<var>${text_split1}</var>
+<arg>${newText}</arg>
+<arg>1</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-01-22T12:04:42.865138" elapsed="0.000531"/>
+</kw>
+<status status="PASS" start="2025-01-22T12:04:42.830624" elapsed="0.035205"/>
+</kw>
+<status status="PASS" start="2025-01-22T12:04:29.008961" elapsed="13.857089"/>
+</test>
+<doc>To validate login form2</doc>
+<status status="PASS" start="2025-01-22T12:04:28.620006" elapsed="14.247252"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testdemo2" id="s1" pass="1" fail="0" skip="0">Testdemo2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
