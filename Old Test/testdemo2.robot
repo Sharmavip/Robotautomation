@@ -29,9 +29,9 @@ Validate Child window Functionality
 *** Keywords ***
 
 Select the Link of the Child Window
-    Sleep    3
-    Click Element    css:.blinkingText
-    #xpath:(//a[@class='blinkingText'])
+    Sleep    4
+    Click Element    xpath:(//a[@class='blinkingText'])
+    #css:.blinkingText
     Sleep    5
 
 Verify the user is switched to Child window
