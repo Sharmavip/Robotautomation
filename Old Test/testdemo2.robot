@@ -29,7 +29,7 @@ Validate Child window Functionality
 *** Keywords ***
 
 Select the Link of the Child Window
-    Sleep    5
+    Sleep    3
     Click Element    css:.blinkingText
     #xpath:(//a[@class='blinkingText'])
     Sleep    5
