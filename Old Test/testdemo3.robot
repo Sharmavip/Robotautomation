@@ -16,17 +16,17 @@ ${popup}    css:.modal-body
 
 
 *** Test Cases ***
-#Validate UnSuccessful Login
-#    Fill the login form    ${username}    ${invalid_password}
-#    Wait Until Element is located    ${error_message}
-#    Verify error message is correct
+Validate UnSuccessful Login
+    Fill the login form    ${username}    ${invalid_password}
+    Wait Until Element is located    ${error_message}
+    Verify error message is correct
 
-#Validate Successful Login
-#    Fill the login form    ${username}    ${valid_password}
-#    Wait Until Element is located    ${success_message}
-#    Verify the next page
-#    Verify Card Details in the Shop Page
-#    Select the Phone    iphone X
+Validate Successful Login
+    Fill the login form    ${username}    ${valid_password}
+    Wait Until Element is located    ${success_message}
+    Verify the next page
+    Verify Card Details in the Shop Page
+    Select the Phone    iphone X
 
 Select the form and navigate to Child window
     Fill the login details and form    ${username}    ${valid_password}
