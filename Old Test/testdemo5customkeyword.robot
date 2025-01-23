@@ -20,6 +20,7 @@ ${popup}    css:.modal-body
 *** Test Cases ***
 
 Validate UnSuccessful Login
+    Sleep    3s
     Fill the login form    ${username}    ${invalid_password}
     Wait Until Element is located    ${error_message}
     Verify error message is correct
