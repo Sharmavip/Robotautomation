@@ -2,7 +2,7 @@
 *** Settings ***
 Documentation    To validate login form2
 Library       SeleniumLibrary
-Library    Collections
+Library    DataDriver    file=resources/data.csv    encoding=utf_8    dialect=unix
 Test Setup    Open the Browser login app
 #Test Teardown    No Operation
 
@@ -17,10 +17,9 @@ ${error_message}    css:.alert.alert-danger
 
 
 
-*** Test Cases ***    username    password
-Invalid username    dashed    learning
-Invalid password    rahulshetty    abcdf
-Special Characters    @#$@    learning
+*** Test Cases ***
+Login with user ${username} and ${password}    xyz    123
+
     
 
 
