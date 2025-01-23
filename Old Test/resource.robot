@@ -1,9 +1,10 @@
 
 
 *** Variables ***
-${username}    rahulshettyacademy
+
 ${invalid_password}    12345678
 ${valid_password}    learning
+${username}    rahulshettyacademy
 
 *** Keywords ***
 Open the Browser login app
