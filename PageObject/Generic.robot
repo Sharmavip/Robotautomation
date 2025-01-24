@@ -11,7 +11,8 @@ ${url}    https://rahulshettyacademy.com/loginpagePractise/
 
 *** Keywords ***
 Open the Browser login app
-    Create Webdriver    Chrome
+    Create Webdriver    Firefox
+
     Go To    ${url}
 
 Close Browser Session
