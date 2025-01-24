@@ -22,7 +22,7 @@ ${error_message}    css:.alert.alert-danger
 *** Test Cases ***
 
 Validate UnSuccessful Login
-    Sleep    3s
+#   Wait Until Keyword Succeeds    20 sec
     LandingPage.Fill the login form    ${username}    ${invalid_password}
     Generic.Wait Until Element is located on Page    ${error_message}
     LandingPage.Verify error message is correct    

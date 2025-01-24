@@ -1,3 +1,4 @@
+from pygments.lexers.robotframework import ForLoop
 from robot.api.deco import library, keyword
 from robot.libraries.BuiltIn import BuiltIn
 
@@ -20,5 +21,6 @@ class shop():
         for productsTitle in productstitles:
             if productsTitle.text in productslist:
                 self.selLib.click_button("xpath:(//*[@class='card-footer'])["+str(i)+"]/button")
-        i = i + 1
+            i = i + 1
+        self.selLib.click_link("css:li.active a")
 
