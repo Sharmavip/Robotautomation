@@ -18,11 +18,13 @@ ${popup}    css:.modal-body
 *** Test Cases ***
 
 Validate UnSuccessful Login
+    [Tags]    Smoke
     Fill the login form    ${username}    ${invalid_password}
     Wait Until Element is located    ${error_message}
     Verify error message is correct
 
 Validate Successful Login
+    [Tags]    Regression
     Sleep    3
     Fill the login form    ${username}    ${valid_password}
     Wait Until Element is located    ${success_message}

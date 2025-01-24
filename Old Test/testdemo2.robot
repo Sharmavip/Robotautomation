@@ -19,6 +19,7 @@ ${url}    https://rahulshettyacademy.com/loginpagePractise/
 *** Test Cases ***
 
 Validate Child window Functionality
+    [Tags]    Smoke
     Select the Link of the Child Window
     Verify the user is switched to Child window
     Grab the email id from the Child Window
