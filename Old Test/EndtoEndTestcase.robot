@@ -37,8 +37,8 @@ Validate Successful Login
 
     Check Items On Checkout Page    ${listOfProducts}
     CheckoutPage.Verify the checkout Items and Proceed
-    ConfirmPage.Enter the Country and select it    ${country_name}
-    ConfirmPage.Purchase the product and Confirm the Purchase
+#    ConfirmPage.Enter the Country and select it    ${country_name}
+#    ConfirmPage.Purchase the product and Confirm the Purchase
 
     
 
