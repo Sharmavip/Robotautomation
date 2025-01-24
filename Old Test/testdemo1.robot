@@ -30,6 +30,7 @@ Validate Successful Login
     Select the Phone    iphone X
 
 Select the form and navigate to Child window
+    Sleep    3
     Fill the login details and form    ${username}    ${valid_password}
     Verify the next page
 
