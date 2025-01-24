@@ -22,12 +22,13 @@ ${error_message}    css:.alert.alert-danger
 *** Test Cases ***
 
 Validate UnSuccessful Login
-#   Wait Until Keyword Succeeds    20 sec
+    Sleep    3
     LandingPage.Fill the login form    ${username}    ${invalid_password}
     Generic.Wait Until Element is located on Page    ${error_message}
     LandingPage.Verify error message is correct    
 
 Validate Successful Login
+    Sleep    3
     LandingPage.Fill the login form    ${username}    ${valid_password}
     ShopPage.Wait Until Element is located
     ShopPage.Verify the next page
