@@ -1,6 +1,6 @@
 
 *** Settings ***
-Documentation    To validate login form2
+Documentation    To validate  End2End Scenario
 Library       SeleniumLibrary
 Library    Collections
 Library    ../customLibraries/shop.py
