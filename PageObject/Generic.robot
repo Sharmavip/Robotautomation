@@ -8,10 +8,11 @@ ${invalid_password}    12345678
 ${valid_password}    learning
 ${username}    rahulshettyacademy
 ${url}    https://rahulshettyacademy.com/loginpagePractise/
+${Browser}    Firefox
 
 *** Keywords ***
 Open the Browser login app
-    Create Webdriver    Firefox
+    Create Webdriver    ${Browser}
 
     Go To    ${url}
 
