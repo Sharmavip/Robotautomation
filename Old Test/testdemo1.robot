@@ -23,6 +23,7 @@ Validate UnSuccessful Login
     Verify error message is correct
 
 Validate Successful Login
+    Sleep    3
     Fill the login form    ${username}    ${valid_password}
     Wait Until Element is located    ${success_message}
     Verify the next page
