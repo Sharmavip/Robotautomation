@@ -6,7 +6,7 @@ Library    Collections
 Test Setup    Open the Browser login app
 #Test Teardown    No Operation
 
-Resource    resource.robot
+Resource    ../PageObject/Generic.robot
 Test Template    Validate UnSuccessful Login
 #Test Template    Validate Successful Login
 

@@ -7,7 +7,7 @@ Library    String
 
 Test Setup    Open the Browser login app
 #Test Teardown    No Operation
-Resource    resource.robot
+Resource    ../PageObject/Generic.robot
 
 *** Variables ***
 ${url}    https://rahulshettyacademy.com/loginpagePractise/
