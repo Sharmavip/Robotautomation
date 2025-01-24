@@ -5,7 +5,7 @@ Library       SeleniumLibrary
 Library    Collections
 Library    ../customLibraries/shop.py
 Library    ../customLibraries/checkout.py
-Test Setup    Open the Browser login app
+Test Setup    Generic.Open the Browser login app
 #Test Teardown    No Operation
 
 Resource    ../PageObject/Generic.robot
